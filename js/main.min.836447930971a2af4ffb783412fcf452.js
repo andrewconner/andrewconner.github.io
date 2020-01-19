@@ -1,0 +1,8 @@
+function isRetina(){var mediaQuery="(-webkit-min-device-pixel-ratio: 1.5),\
+					  (min--moz-device-pixel-ratio: 1.5),\
+					  (-o-min-device-pixel-ratio: 3/2),\
+					  (min-resolution: 1.5dppx)";if(window.devicePixelRatio>1)
+return true;if(window.matchMedia&&window.matchMedia(mediaQuery).matches)
+return true;return false;};function retina(){if(!isRetina())
+return;$("img.2x").map(function(i,image){var path=$(image).attr("src");path=path.replace(".png","@2x.png");path=path.replace(".jpg","@2x.jpg");$(image).attr("src",path);});};$(document).ready(retina);$(document).ready(preload2);const idleCallback=window.requestIdleCallback||window.requestAnimationFrame;function preload2(){const links=Array.prototype.slice.call(document.getElementsByTagName('a')||[]);links.map(l=>{l.addEventListener('mouseenter',function(ev){const link=this.href;if(!this.hasAttribute('preloaded')&&(link.startsWith("https://andrewconner.com")||link.startsWith("https://andrewconner.github.io")||link.startsWith("http://localhost"))){idleCallback(()=>{const prerenderLink=document.getElementById('prerenderLink');this.setAttribute('preloaded',1);if(prerenderLink){if(prerenderLink.href!==link)prerenderLink.href=link;;}else{var preloadLink=document.createElement('link');preloadLink.id="prerenderLink";preloadLink.rel="prefetch prerender";preloadLink.href=link;document.head.appendChild(preloadLink);}});}})});}
+document.addEventListener('DOMContentLoaded',function(){idleCallback(preload2);});
