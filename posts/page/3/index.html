@@ -59,6 +59,17 @@
 <div class=main>
 <article class=post>
 <div class=title-wrap>
+<h1><a href=https://andrewconner.com/posts/moving-fast-staying-secure/>Moving fast and staying secure</a> </h1>
+<aside class=meta>
+<span class=postdate>October 2015</span>
+</aside>
+</div>
+<div class=post-content>
+<p>Startups often “move fast and break things” to get to market faster and test assumptions. However, they also often do not take security seriously enough. I&rsquo;ve responsibly disclosed web vulnerabilities in sites such as Pinterest, Amazon, IMDB, and many more smaller startups. Typically, the issues were very simple and avoidable by having a culture of security. Recently, I was sent a link of a site that broke many of the guidelines below. Within three minutes, I had their database credentials. The site had many flaws, but I never even had to mangle query parameters... <a class=more-arrow href=https://andrewconner.com/posts/moving-fast-staying-secure/>(more) →</a> </p>
+</div>
+</article>
+<article class=post>
+<div class=title-wrap>
 <h1><a href=https://andrewconner.com/posts/gamblers-verity/>Gambler's Verity?</a> </h1>
 <aside class=meta>
 <span class=postdate>October 2015</span>
@@ -140,18 +151,6 @@ To avoid running a small server, I considered serverless approaches that would h
 <div class=post-content>
 <p>Occasionally, you may need to interface with Java Futures in Scala. Unfortunately, it is “an abomination”. Several older Java libraries, like Amazon&rsquo;s SDK, provides asynchronous interfaces using Java&rsquo;s Futures. java.util.concurrent.Future only provides a .get, and no mechanism to react to completion. The best solution to avoid blocking a thread checking for completion (or simply .geting inside another thread) is to periodically check for completion.
 .. <a class=more-arrow href=https://andrewconner.com/posts/using-java-future-in-scala/>(more) →</a> </p>
-</div>
-</article>
-<article class=post>
-<div class=title-wrap>
-<h1><a href=https://andrewconner.com/posts/scalaz-task-scala-future/>Scalaz Task ↔ Scala Future</a> </h1>
-<aside class=meta>
-<span class=postdate>September 2015</span>
-</aside>
-</div>
-<div class=post-content>
-<p>Since many asynchronous APIs in Scala use Futures, if you prefer using Task, you&rsquo;ll need to convert between the two. Here are two simple classes that enhance scalaz.concurrent.Task and scala.concurrent.Future:
-.. <a class=more-arrow href=https://andrewconner.com/posts/scalaz-task-scala-future/>(more) →</a> </p>
 </div>
 </article>
 <hr>
